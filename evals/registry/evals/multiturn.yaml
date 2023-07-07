@@ -1,6 +1,9 @@
 multiturn:
   id: multiturn.dev.v0
+  description: <description>
   metrics: [accuracy]
 
 multiturn.dev.v0:
   class: evals.elsuite.multiturn:MultiTurnEval
+  args:
+    samples_jsonl: multiturn/samples.jsonl
