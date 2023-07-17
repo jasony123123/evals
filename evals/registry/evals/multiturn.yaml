@@ -1,0 +1,9 @@
+ballots:
+  id: ballots.dev.v0
+  description: <description>
+  metrics: [accuracy]
+
+ballots.dev.v0:
+  class: evals.elsuite.ballots:BallotsEval
+  args:
+    samples_jsonl: ballots/samples.jsonl
