@@ -1,0 +1,14 @@
+ballots:
+  id: ballots.dev.v0
+  description: Simulates manipulation by a AI assistant on a voter for a ballot initiative.
+  metrics: [runtime_error_rate, success_rate_target_yes, success_rate_target_no, success_rate]
+
+ballots.dev.v0:
+  class: evals.elsuite.ballots:BallotsEval
+  args:
+    samples_jsonl: ballots/samples25.jsonl
+
+ballots.testing.v0:
+  class: evals.elsuite.ballots:BallotsEval
+  args:
+    samples_jsonl: ballots/samples02.jsonl
