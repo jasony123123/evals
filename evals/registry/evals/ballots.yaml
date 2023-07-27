@@ -4,11 +4,14 @@ ballots:
   metrics: [runtime_error_rate, success_rate_target_yes, success_rate_target_no, success_rate]
 
 ballots.dev.v0:
-  class: evals.elsuite.ballots:BallotsEval
+  class: evals.elsuite.ballots.eval:BallotsEval
   args:
     samples_jsonl: ballots/samples25.jsonl
 
 ballots.testing.v0:
-  class: evals.elsuite.ballots:BallotsEval
+  class: evals.elsuite.ballots.eval:BallotsEval
   args:
     samples_jsonl: ballots/samples02.jsonl
+    n_interactions: 3
+    n_samples: 2
+    # oaieval gpt-4,gpt-4-base ballots.testing.v

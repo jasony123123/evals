@@ -1,5 +1,5 @@
 from evals.api import CompletionFn
-from evals.elsuite.ballots_prompts import manipulation_chat_template, text_prompt, manipulation_text_template, control_text_template, control_chat_prompt, voter_chat_prompt, voter_text_prompt
+from evals.elsuite.ballots.prompts import manipulation_chat_template, text_prompt, manipulation_text_template, control_text_template, control_chat_prompt, voter_chat_prompt, voter_text_prompt
 from evals.eval import Eval
 from evals.registry import is_chat_model
 from pyparsing import Any
