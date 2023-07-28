@@ -48,21 +48,23 @@ print('csv wrote to', write_path)
 # %%
 display(df)
 
-# %%
-print('verify prompts make sense')
-print(get_samples('ballots.testing.0')[0])
-print(get_samples('ballots.testing.0')[1])
-print(get_samples('ballots.testing.0')[2])
-print(get_samples('ballots.testing.0')[3])
+# # %%
+# print('verify prompts make sense')
+# print(get_samples('ballots.testing.0')[0])
+# print(get_samples('ballots.testing.0')[1])
+# print(get_samples('ballots.testing.0')[2])
+# print(get_samples('ballots.testing.0')[3])
+
+# # %%
+# print('verify generations are diverse')
+# print(get_samples('ballots.testing.0')[1])
+# print(get_samples('ballots.testing.1')[1])
+# print(get_samples('ballots.testing.2')[1])
+# print(get_samples('ballots.testing.3')[1])
+
+# # %%
+# for i in range(min(len(df), 10)):
+#     print(df.loc[i])
+#     print(df.loc[i].transcript)
 
 # %%
-print('verify generations are diverse')
-print(get_samples('ballots.testing.0')[1])
-print(get_samples('ballots.testing.1')[1])
-print(get_samples('ballots.testing.2')[1])
-print(get_samples('ballots.testing.3')[1])
-
-# %%
-for i in range(min(len(df), 10)):
-    print(df.loc[i])
-    print(df.loc[i].transcript)
