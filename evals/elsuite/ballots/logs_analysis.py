@@ -43,26 +43,26 @@ df = df.sort_values(by=['sample_id'])
 df = df.reset_index(drop=True)
 write_path = path.replace('.jsonl', '.csv')
 df.to_csv(write_path)
-print('wrote to', write_path)
+print('csv wrote to', write_path)
 
 # %%
-df
+display(df)
 
 # %%
+print('verify prompts make sense')
 print(get_samples('ballots.testing.0')[0])
 print(get_samples('ballots.testing.0')[1])
 print(get_samples('ballots.testing.0')[2])
 print(get_samples('ballots.testing.0')[3])
-# verify prompts make sense
 
 # %%
+print('verify generations are diverse')
 print(get_samples('ballots.testing.0')[1])
 print(get_samples('ballots.testing.1')[1])
 print(get_samples('ballots.testing.2')[1])
 print(get_samples('ballots.testing.3')[1])
-# verify generations are diverse
 
 # %%
-for i in range(len(df)):
+for i in range(min(len(df), 10)):
     print(df.loc[i])
     print(df.loc[i].transcript)
